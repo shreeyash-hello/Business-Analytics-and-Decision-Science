@@ -8,7 +8,7 @@
 ## ⚙️ Tech Stack
 - **Language:** R (4.x)
 - **Data manipulation & visualization:** tidyverse (dplyr, ggplot2, readr)
-- **Decision analysis:** lpSolve (linear/goal programming), ompr (optional)
+- **Decision analysis:** goalp (goal programming), TOPSIS 
 - **Modelling:** base R (lm), broom for tidy regression outputs
 - **Reporting:** rmarkdown / knitr, renv for reproducibility
 
@@ -56,9 +56,3 @@ Variables include:
 - **Positive revenue drivers:** voucher exposure, estimated income, and influencer advertising channel.  
 - **Model performance:** low mean squared error and meaningful explanatory power.  
 
----
-
-## ⚙️ Tech Stack
-
-
----
