@@ -1,42 +1,60 @@
-**Data-driven decision support in R:**  
-1. Select the best robot prototype and allocate a 30-robot fleet within budget and technician constraints.  
-2. Analyze customer data to identify factors driving revenue.  
 
-![demo gif](demo/demo.gif)
 
----
+# Decision analytics in R for logistics and customer insights.
 
-## 🚀 Project Overview
-This project demonstrates how decision analysis and predictive modeling can guide real-world logistics and marketing strategy.  
+**This project is split into two complementary parts:**
 
-- **Part A (Fleet allocation):** Use **multi-criteria decision-making** and **integer programming** to choose the optimal delivery robot and allocate 30 robots across store types.  
-- **Part B (Customer analysis):** Apply **exploratory data analysis** and **multiple linear regression** on customer demographics to uncover drivers of spending.  
+1. **Part 1: Robot selection & fleet allocation** — choose the best robot prototype and allocate 30 robots across store types under budget and technician constraints.  
+2. **Part 2: Customer revenue analysis** — analyze demographics and behavior to identify factors that drive revenue.  
+
 
 ---
 
-## 📊 Key Results
-- **Fleet allocation:**  
-  - Selected robot prototype: **Deviant** (highest TOPSIS score).  
-  - Final allocation: **17 grocery / 5 clothing / 8 sports**.  
-  - Budget used: **£250,000**; technician hours: within 250-hour weekly limit.  
+## 📑 Part 1 — Robot selection & fleet allocation
 
-- **Customer revenue analysis:**  
-  - Dataset: 400 customers (age, time on site, voucher, income, ad channel, revenue).  
-  - Key positive drivers of revenue: **voucher exposure, estimated income, influencer advertising channel**.  
-  - Model achieved good fit with low mean squared error.  
+### Problem
+A company is planning a one-month trial of autonomous robots for last-mile delivery.  
+Objective: **select the best robot prototype** from four options and **allocate 30 robots** across grocery, clothing, and sports stores while meeting constraints:
 
----
+- Total budget: **£250,000**  
+- Technician availability: **≤ 250 hours/week**  
+- Minimum robots per store: **5**  
 
-## 🛠 Methods
-### Part A — Fleet decision & allocation
-- **TOPSIS** (Technique for Order Preference by Similarity to Ideal Solution) to rank robot prototypes on carrying capacity, battery, speed, cost, and reliability.  
-- **Goal Programming / Integer LP** to allocate robots across store types under constraints (budget, technician hours, minimum robots per store).  
+### Methods
+- **TOPSIS (multi-criteria decision-making):** rank prototypes on carrying capacity, battery size, speed, cost, and reliability.  
+- **Integer goal programming:** allocate robots to stores under budget and technician-hour constraints.  
 
-### Part B — Customer revenue analysis
-- **Exploratory Data Analysis (EDA):** revenue trends by income, ad channel, voucher status.  
-- **Multiple Linear Regression (MLR):** model revenue as a function of age, time on site, voucher, income, and ad channel.  
-- **Model evaluation:** R², MSE, normalized MSE, predicted vs actual plots.  
+### Results
+- **Best prototype:** **Deviant** (highest TOPSIS score).  
+- **Final allocation:** **17 grocery / 5 clothing / 8 sports** (30 robots).  
+- **Constraints satisfied:** £250,000 budget fully used, 245 technician hours per week.
 
 ---
 
-## 📂 Repo Structure
+## 📑 Part 2 — Customer revenue analysis
+
+### Problem
+To evaluate the trial’s impact, customer data (400 records) is analyzed to understand what factors influence revenue.  
+Variables include:  
+- Estimated Age  
+- Time on Site  
+- Seen Voucher (0/1)  
+- Estimated Income  
+- Advertisement Channel (1=Leaflet, 2=Social Media, 3=Search Engine, 4=Influencer)  
+- Revenue (dependent variable)  
+
+### Methods
+- **Exploratory Data Analysis (EDA):** average revenue by income bin, voucher status, and ad channel.  
+- **Multiple Linear Regression:** model revenue as a function of demographics and marketing channel.  
+- **Diagnostics:** R², MSE, normalized MSE, predicted vs actual plots.  
+
+### Results
+- **Positive revenue drivers:** voucher exposure, estimated income, and influencer advertising channel.  
+- **Model performance:** low mean squared error and meaningful explanatory power.  
+
+---
+
+## ⚙️ Tech Stack
+
+
+---
