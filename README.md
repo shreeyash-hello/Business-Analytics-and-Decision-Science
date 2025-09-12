@@ -1,5 +1,3 @@
-
-
 # Decision analytics in R for logistics and customer insights.
 
 **This project is split into two complementary parts:**
@@ -7,6 +5,12 @@
 1. **Part 1: Robot selection & fleet allocation** — choose the best robot prototype and allocate 30 robots across store types under budget and technician constraints.  
 2. **Part 2: Customer revenue analysis** — analyze demographics and behavior to identify factors that drive revenue.  
 
+## ⚙️ Tech Stack
+- **Language:** R (4.x)
+- **Data manipulation & visualization:** tidyverse (dplyr, ggplot2, readr)
+- **Decision analysis:** lpSolve (linear/goal programming), ompr (optional)
+- **Modelling:** base R (lm), broom for tidy regression outputs
+- **Reporting:** rmarkdown / knitr, renv for reproducibility
 
 ---
 
